@@ -35,7 +35,7 @@ Along the way, I explored USB-C power input configuration, component footprints,
 ## 📂 Repository Structure
 
 ```text
-usb-c-power-supply-pcb/
+USB-C-powersupply-PCB/
 │
 ├── schematic/
 │   └── schematic.pdf
