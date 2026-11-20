@@ -1,36 +1,46 @@
-# 🔌 USB-C Power Supply PCB
+# 🔌 USB-C 5V Power Supply PCB
 
 My first custom PCB design, built using **EasyEDA**!
 
-A small project exploring USB Type-C power input, circuit design, component selection and PCB layout.
+A compact USB-C powered 5V supply board designed to explore USB Type-C power input, CC configuration, decoupling and PCB layout.
 
-## 📸 Project Preview
-
-<!-- Add your PCB 3D render here -->
-
-## 🚀 About the Project
-
-This project is my first step into custom PCB design.
-
-The goal was to design a USB-C powered supply circuit and translate the schematic into a physical PCB layout using EasyEDA.
-
-Along the way, I explored USB-C power input configuration, component footprints, routing and design rule checks.
-
-## ⚡ Key Features
+## ⚡ Features
 
 - 🔌 USB Type-C power input
-- ⚙️ CC1 and CC2 configuration
-- 🔋 VBUS and GND power distribution
-- 🧩 Custom component placement and routing
-- 📐 Designed using EasyEDA
+- 🔋 5V power rail
+- ⚙️ CC1 and CC2 pull-down configuration (5.1kΩ)
+- 🔆 Green LED power indicator
+- 🔧 2-pin screw terminal output
+- 🧩 Input and output decoupling capacitors
 
-## 🛠️ Tools & Technologies
+## 🛠️ Circuit Overview
 
-| Tool | Purpose |
+The circuit uses a USB Type-C connector configured as a 5V power sink.
+
+**Power Input**
+- USB Type-C receptacle
+- 5.1kΩ pull-down resistors on CC1 and CC2
+
+**Power Conditioning**
+- Two 100nF capacitors on the input rail
+- One 100nF capacitor on the output rail
+
+**Power Indication**
+- Green LED with a 1kΩ current-limiting resistor
+
+**Power Output**
+- 2-pin terminal block providing 5V and GND
+
+## 🧰 Tools & Components
+
+| Category | Component |
 |---|---|
-| EasyEDA | Schematic and PCB design |
-| USB Type-C | Power input interface |
-| PCB Design | Layout and routing |
+| EDA Software | EasyEDA |
+| Input | USB Type-C |
+| Resistors | 5.1kΩ × 2, 1kΩ × 1 |
+| Capacitors | 100nF × 3 |
+| Indicator | Green LED |
+| Output | 2-pin terminal block |
 
 ## 📂 Repository Structure
 
@@ -38,7 +48,8 @@ Along the way, I explored USB-C power input configuration, component footprints,
 USB-C-powersupply-PCB/
 │
 ├── schematic/
-│   └── schematic.pdf
+│   ├── schematic.pdf
+│   └── schematic.png
 │
 ├── pcb/
 │   ├── pcb-layout.png
@@ -47,21 +58,26 @@ USB-C-powersupply-PCB/
 ├── documentation/
 │   └── BOM.csv
 │
+├── source/
+│   └── easyeda-project
+│
 └── README.md
 ```
 
 ## 🧠 What I Learned
 
-- Understanding USB Type-C power input
-- Working with CC resistors
-- Schematic capture in EasyEDA
-- Component footprint selection
-- PCB placement and routing
-- Running Design Rule Checks (DRC)
+- USB Type-C power input configuration
+- CC1 and CC2 pin functionality
+- Pull-down resistor selection
+- Power rail decoupling
+- Schematic capture and PCB layout
+- Component footprint selection and routing
+- Design Rule Checks (DRC)
 
-## 📌 Project Status
+## 📍 Project Status
 
-🟡 **Design Completed**
+🟡 **Design Completed — Fabrication Pending**
 
-- [x] Schematic design
-- [x] PCB layout
+- [x] Circuit schematic
+- [x] Component selection
+- [x] PCB layout design
